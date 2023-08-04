@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="./menu.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <script src="https://kit.fontawesome.com/d08f329914.js" crossorigin="anonymous"></script>
+    <title>Mama's Menu</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container-left">
+        <span class="logo-container">
+          <a href="/public/home/home.html"
+            ><img class="logo" src="/Images/MamasCookin-Logo.png" alt=""
+          /></a>
+        </span>
+        <a href="./menu.html"
+          ><button class="nav-buttons">Mama's Menu</button></a
+        >
+        <a href="../pickMeals/pickMeals.html"
+          ><button class="nav-buttons">Our Plans</button></a
+        >
+        <button class="nav-buttons">FAQ</button>
+        <button class="nav-buttons">Contact Us</button>
+      </div>
+      <div class="nav-container-right">
+        <button class="nav-buttons" id="log-in">Log in</button>
+        <button class="nav-buttons" id="sign-up">Sign up</button>
+      </div>
+    </nav>
+    <header id="header-container">
+      <div id="header-text-container">
+        <h1 id="explore-our-menu-text">Explore Mama's Menu</h1>
+        <h3 id="meals-starting-text">Meals starting at $7.99 per serving.</h3>
+      </div>
+      <div id="header-search-filter-container">
+        <form id="search-form">
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Search all of our recipes"
+          />
+          <!-- <button id="button-search" type="submit"></button> -->
+        </form>
+        <div class="filter-button-container">
+          <button class="filter-button" id="protein-plus-button">Protein Plus</button>
+          <button class="filter-button" id="keto-button">Keto</button>
+          <button class="filter-button" id="most-popular-button">Most Popular</button>
+          <button class="filter-button" id="calorie-smart-button">
+            Calorie Smart
+          </button>
+          <button class="filter-button" id="carb-smart-button">Carb Smart</button>
+          <button class="clear-filters" id="clear-filter"><i class="fa-solid fa-filter-circle-xmark" style="color: #ffffff;"></i></button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <h2 id="meal-kits-text">Meal Kits</h2>
+      <section class="menu-items-container">
+      </section>
+    </main>
+  </body>
+  <script src="./menu.js"></script>
+</html>

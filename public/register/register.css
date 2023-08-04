@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Mulish:wght@300&display=swap');
+
+/* breadcrumb */
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+} 
+.logo-container{
+  width: 150px;
+}
+
+.logo{
+    height: 100px;
+    width: 120px;
+    cursor: pointer;
+}
+.nav-buttons{
+    background-color: transparent;
+    border-color: transparent;
+    font-size: large;
+    font-family: 'Mulish', sans-serif;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 0 350px;
+}
+#select-plan-bc{
+    color: green;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#nav-{
+    color: green;
+
+}
+#pick-meals-bc{
+    color: green;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#register-bc{
+    color: green;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+/* breadcrumb */
+
+/* Main */
+
+#main-section-container{
+    background-color: rgb(247, 244, 234);
+    display: flex;
+    justify-content: center;
+    padding: 29px 15px;
+    width: 100%;
+    height: 85vh
+}
+/* Main */
+
+/* Customer Data - Delivery Address */
+#customer-data-container{
+    display: flex; 
+    /* justify-content: space-evenly; */
+    background-color: white;
+    padding: 25px;
+    border-radius: 6px;
+    border-color: grey;
+    flex-direction: column;
+    width: 40%;
+    margin-right: 50px;
+     height: fit-content; /* --------------- */
+  }
+  #delivery-address-container{
+    display: flex;
+    justify-content: start;
+    /* align-items: start; */
+  }
+#customer-data-heading{
+    font-family: 'Manrope', sans-serif;
+    font-weight: bolder;
+    font-size: x-large;
+    color: grey;
+    padding-bottom: 20px;
+}
+label{
+    font-size: large;
+    font-family: 'Mulish', sans-serif;
+    color: rgb(93, 93, 93);
+    padding-bottom: 10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    /* align-self: center; */
+}
+.input-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.input-label-containers{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    padding: 10px;
+}
+
+input{
+    border-radius: 5px;
+    border-color: rgb(220, 218, 218);
+    padding: 15px 0;
+    border-width: .5px;
+    font-family: 'Mulish', sans-serif;
+    font-size: large;
+    color: rgb(66, 66, 66);
+}
+input:focus {
+    outline: darkgreen;
+}
+#zipcode-container{
+    width: 20%;
+}
+#phone-number-input{
+    width: 100%;
+}
+#phone-container{
+    width: 100%;
+}
+#state-container{
+    width: 30%
+}
+#city-container{
+    width: 50%;
+}
+#address-line-container{
+    width: 50%;
+
+}
+#address-line-two-container{
+    width: 50%;
+}
+#first-name-container{
+    width: 50%;
+}
+
+#last-name-container{
+    width: 50%;
+}
+#email-container{
+    width: 50%;
+}
+#password-container{
+    width: 50%;
+}
+#email-pass-container{
+    padding-top: 20px;
+}
+/* Customer Data - Delivery Address */
+
+
+
+/* Order Summary */
+#os-container{
+    display: flex;
+    flex-direction: column;
+   padding-right: 100px;
+    border-color: grey;
+    width: 20%;
+    height: fit-content;
+}
+
+#os-main-container{
+    background-color: white;
+    padding: 25px;
+    border-radius: 6px;
+    height: fit-content;
+    margin-bottom: 25px;
+}
+
+.order-summary-heading{
+    font-size: x-large;
+    font-family: 'Manrope', sans-serif;
+    padding-bottom: 15px;
+}
+#os-image{
+    height: 100px;
+    width: 100px;
+}
+
+/* midsection */
+#os-mid-section-container{
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    font-family: 'Mulish', sans-serif;
+    color: rgb(0, 0, 0);
+}
+#kit-name-quantity-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#kit-shipping-data{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+#os-price-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: large;
+    font-family: 'Mulish', sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: rgb(247, 244, 234);
+    padding: 10px;
+}
+
+
+#next-button{
+    font-size: large;
+    border-radius: 8px;
+    padding: 5px;
+    border-color: transparent;
+    width: 100%;
+    background-color: rgb(83, 118, 19);
+    color: white;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 rgb(96, 135, 60);
+    /* transition: color .3s ease-in-out, box-shadow .3s ease-in-out; */
+}
+
+#next-button:hover {
+    /* box-shadow: inset 15vw 0 0 0 rgb(96, 135, 60); */
+    background-color: rgb(96, 135, 60);
+    color: white;
+}
+#os-message-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding-top: 10px;
+}
+#os-message-img{
+    height: 100px;
+    width: 120px;
+}
+#os-message{
+font-family: 'Mulish', sans-serif;
+font-size: small;
+margin-left: 5px;
+}
+/* Order Summary */

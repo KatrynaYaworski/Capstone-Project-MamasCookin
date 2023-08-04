@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="../payment/payment.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d08f329914.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Cart</title>
+  </head>
+  <body>
+    <nav>
+      <span class="logo-container">
+        <a href="/public/home/home.html"
+          ><img class="logo" src="/Images/MamasCookin-Logo.png" alt=""
+        /></a>
+      </span>
+      <div class="nav-container">
+        <a href="../ourPlans/ourPlans.html"
+          ><button class="nav-buttons" id="select-plan-bc">
+            <i class="fa-regular fa-square-check" style="color: #008000"></i>
+            Select Plans
+          </button></a
+        >
+        <button class="nav-buttons" id="nav-" style="color: #008000">-</button>
+        <a href="../pickMeals/pickMeals.html"
+          ><button class="nav-buttons" id="pick-meals-bc">
+            <i class="fa-solid fa-utensils" style="color: #008000"></i> Pick
+            Meals
+          </button></a
+        >
+        <button class="nav-buttons" id="nav--" style="color: #008000">-</button>
+        <a href="../register/register.html"
+          ><button class="nav-buttons" id="register-bc">
+            <i class="fa-regular fa-address-book" style="color: #008000"></i>
+            Register
+          </button></a
+        >
+        <button class="nav-buttons" id="nav---">-</button>
+        <a href=""
+          ><button class="nav-buttons" id="payment-bc">
+            <i class="fa-regular fa-credit-card" style="color: #008000"></i>
+            Payment
+          </button></a
+        >
+      </div>
+    </nav>
+    <main id="main-section-container">
+
+
+
+
+      <!-- Trigger/Open The Modal -->
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div id="modal-data-conatiner">
+            <p id="modal-text">Your order has been submitted!</p>
+            <span id="date-container">Expects your items no later than <i id="date"></i></span>
+            <div><a href="../home/home.html"><button id="okay-button">okay</button></a></div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <section id="customer-data-outer-container">
+        <section id="customer-data-container">
+          <span id="delivery-card-number-container"
+            ><h6 id="customer-data-heading">Payment Method</h6></span
+          >
+          <section id="card-box">
+            <div id="credit-or-debit-container">
+              <span id="credit-icon-text">
+                <i class="fa-solid fa-circle-dot" style="color: #008000"></i>
+                <span id="credit-or-debit-text">Credit or Debit Card</span>
+              </span>
+              <span id="card-icons">
+                <span id="visa">
+                  <i class="fa-brands fa-cc-visa" style="color: #0021a3"></i>
+                </span>
+                <span id="amex">
+                  <i class="fa-brands fa-cc-amex" style="color: #00bfff"></i>
+                </span>
+                <span id="discover">
+                  <i
+                    class="fa-brands fa-cc-discover"
+                    style="color: #ff0000"
+                  ></i>
+                </span>
+                <span id="mastercard">
+                  <i
+                    class="fa-brands fa-cc-mastercard"
+                    style="color: #00225c"
+                  ></i>
+                </span>
+              </span>
+            </div>
+            <form id="input-form" action="">
+              <div class="input-container">
+                <span
+                  class="input-label-containers"
+                  id="card-number-line-container"
+                >
+                  <label for="card-number-line-input">Card number *</label>
+                  <input
+                    type="text"
+                    name=""
+                    placeholder=" 1234 5678 9012 3456"
+                    id="card-number-line-input"
+                  />
+                </span>
+              </div>
+              <div class="input-container">
+                <span class="input-label-containers" id="expiration-container">
+                  <label for="expiration-input">Expiration *</label>
+                  <input
+                    type="text"
+                    name=""
+                    placeholder=" MM/YY"
+                    id="expiration-input"
+                  />
+                </span>
+                <span class="input-label-containers" id="cvc-container">
+                  <label for="cvc-input">CVC code *</label>
+                  <input
+                    type="text"
+                    name=""
+                    placeholder=" CVC"
+                    id="cvc-input"
+                  />
+                </span>
+              </div>
+            </form>
+          </section>
+        </section>
+        <section id="icon-container-os">
+          <div class="os-message-container">
+            <div id="os-message">
+              <h2>
+                <i
+                  class="fa-regular fa-clock fa-bounce"
+                  style="color: #252627"
+                ></i
+                >Quick and easy
+              </h2>
+              no prep, no mess-ready in no time!
+            </div>
+          </div>
+          <div class="os-message-container">
+            <div id="os-message-calendar">
+              <h2>
+                <i
+                  class="fa-regular fa-calendar-check fa-beat-fade"
+                  style="color: #272a30"
+                ></i>
+                Flexible for you
+              </h2>
+              Easily cancel your order anytime!
+            </div>
+          </div>
+        </section>
+      </section>
+      <section id="os-container">
+        <section id="os-main-container">
+          <h6 class="order-summary-heading">Order summary</h6>
+          <div id="os-top-section-container">
+            <img id="os-image" src="/Images/emojiYummyHeart.png" alt="" />
+            <span id="os-quantity-per-week"></span>
+            <span id="os-price-per-week"></span>
+          </div>
+          <hr />
+          <div id="os-mid-section-container">
+            <div id="kit-name-quantity-container">
+              <span id="os-kit-price-name">Kit price</span>
+              <span id="os-kit-price-quantity">$0.00</span>
+            </div>
+            <div id="kit-shipping-data">
+              <span id="os-shipping-price">Shipping</span>
+              <span id="os-shipping-price">$10.99</span>
+            </div>
+          </div>
+          <hr />
+          <div id="os-botton-section-container">
+            <div id="os-price-container">
+              <span id="os-price-text">Kit total</span>
+              <span id="os-price-total">$0.00</span>
+            </div>
+          </div>
+          <section id="cart-items-outer-container">
+            <section id="cart-items-container"></section>
+          </section>
+        </section>
+      </section>
+    </main>
+    <div id="place-order-button-container">
+        <button id="place-order-button">Place Order</button>
+    </div>
+  </body>
+  <script src="./payment.js"></script>
+</html>

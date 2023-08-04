@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Mulish:wght@300&display=swap');
+
+
+/* Nav Bar */
+.logo{
+    height: 100px;
+    width: 120px;
+    cursor: pointer;
+}
+
+.nav-container-right{
+    display: flex;
+    align-items: center;
+}
+
+.nav-container-left{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    align-items: center;
+}
+.nav-buttons{
+    background-color: transparent;
+    border-color: transparent;
+    font-size: x-large;
+    cursor:pointer;
+}
+
+.nav-buttons:hover {
+    color: green;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+#log-in{
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+#sign-up{
+    border-radius: 8px;
+    padding: 10px;
+    width: 9vw;
+    background-color: rgb(109, 158, 20);
+    color: white;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 rgb(87, 120, 53);
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+#sign-up:hover {
+    box-shadow: inset 200px 0 0 0 rgb(87, 120, 53);
+    color: white;
+  }
+
+  /* Nav Bar */
+
+  /* Header */
+
+#header-container{
+    background-color: rgb(247, 244, 234);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 250px;
+    padding: 25px 0;
+    height: 30vh;
+}
+
+#header-search-filter-container{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+#header-text-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#explore-our-menu-text{
+    font-family: 'Manrope', sans-serif;
+    font-size: 50px;
+    color:  rgb(87, 120, 53);
+    padding-top: 30px;
+}
+
+#meals-starting-text{
+    font-family: 'Mulish', sans-serif;
+    color: grey;
+    font-weight: bolder;
+    font-size: 20px;
+}
+#clear-filter{
+    background-color: rgb(109, 158, 20);
+    padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  border-color: transparent;
+  
+}
+.filter-button{
+    background-color: rgb(204, 238, 170);
+    padding: 12px;
+    border-radius: 5px;
+    border-color:rgb(121, 205, 38);
+    border-width: 1px ;
+    cursor: pointer;
+    font-family: 'Mulish', sans-serif;
+    color: green;
+}
+.filter-button-white{
+    background-color: white;
+    border-color: darkgreen;
+    color: darkgreen;
+}
+.filter-button:hover {
+    background-color: white;
+    border-color: darkgreen;
+    color: darkgreen;
+}
+#search-form{
+    position: relative;
+    z-index: 1;
+}
+#search-icon{
+    position:absolute;
+    z-index: 4;
+}
+
+#search-input{
+    border-radius: 15px;
+    height: 50px;
+    width: 400px;
+    border-color: lightgrey;
+    box-shadow: lightgrey;
+    margin-bottom: 25px;
+    font-family: 'Mulish', sans-serif;
+    font-size: large;
+}
+
+input:focus {
+    outline: darkgreen;
+}
+
+    /* Header */
+
+    /* Menu items */
+main{
+    /* padding: 55px; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#meal-kits-text{
+    font-family: 'Manrope', sans-serif;
+    font-size: 32px;
+    color: grey;
+    width: 75%;
+    padding-top: 15px;
+    }
+    .menu-items-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: white;
+        width: 75%;
+    }
+    .menu-image{
+        height: 180px;
+        width: 300px;
+    }
+    .meal-buttons{
+        display: flex;
+        /* justify-content: center; */
+        flex-direction: column;
+        margin-top: 30px;
+        background-color: white;
+        padding: 0;
+        cursor: pointer;
+        border: 1px solid #eee; 
+        box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
+        transition: all .3s ease-in-out;
+    }
+    .meal-buttons:hover {
+        box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
+        transform: translate3d(0px, -1px, 0px);
+    }
+
+
+    .meal-title{
+        font-family: 'Manrope', sans-serif;
+        margin: 5px 5px;
+    }
+    .preferences{
+        border-radius: 2px;
+        color: white;
+        margin: 5px 5px;
+    }
+    #calorie-smart{
+        background-color:darkcyan;
+        padding: 0 9px;
+    }
+    #protein-plus{
+        background-color:rgba(139, 0, 0, 0.719);
+        padding: 0 9px;
+    }
+    #keto{
+        background-color:rgb(188, 168, 18);
+        padding: 0 9px;
+    }
+    #carb-smart{
+        background-color:rgb(0, 81, 139);
+        padding: 0 9px;
+    }
+    #populars{
+        background-color:rgb(79, 0, 139);
+        padding: 0 9px;
+    }
+    .preference-container{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    }
+
+    /* Menu items */

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="./home.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <title>Mama's Cookin'</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container-left">
+        <span class="logo-container">
+          <a href="./home.html">
+            <img class="logo" src="/Images/MamasCookin-Logo.png" alt="" />
+          </a>
+        </span>
+        <a href="../menu/menu.html"
+          ><button class="nav-buttons">Mama's Menu</button></a
+        >
+        <a href="../pickMeals/pickMeals.html"
+          ><button class="nav-buttons">Our Plans</button></a
+        >
+        <button class="nav-buttons">FAQ</button>
+        <button class="nav-buttons">Contact Us</button>
+      </div>
+      <div class="nav-container-right">
+        <button class="nav-buttons" id="log-in">Log in</button>
+        <a href="../ourPlans/ourPlans.html"
+          ><button class="nav-buttons" id="sign-up">Sign up</button></a
+        >
+      </div>
+    </nav>
+    <main>
+      <div class="container-video">
+        <video
+          id="video"
+          height="1080"
+          autoplay
+          muted
+          loop
+          src="/Images/pexels-alleksana-6107297 (1080p).mp4"
+        ></video>
+        <section class="hero-image-content">
+          <div>
+            <h1>Mama's cookin', Made Easy</h1>
+            <h4>Fresh ready made meals delivered right to your door</h4>
+          </div>
+          <a href="../ourPlans/ourPlans.html"
+            ><button class="green-main-buttons" id="get-started">
+              Get Started
+            </button></a
+          >
+        </section>
+      </div>
+      <section class="how-it-works-container">
+        <h2>How It Works</h2>
+        <section id="how-it-works-icon-container">
+          <figure class="how-it-works-image-text-container">
+            <img src="/Images/SetPreferences.png" alt="" />
+            <div class="how-it-works-text-container">
+              <span class="how-it-works-titles">Set your preferences</span>
+              <span class="how-it-works-description"
+                >Let us know what you love to eat, then choose your meal plan
+                from 4 to 16 meals per order.</span
+              >
+            </div>
+          </figure>
+          <figure class="how-it-works-image-text-container">
+            <img src="/Images/ChooseMeal.png" alt="" />
+            <div class="how-it-works-text-container">
+              <span class="how-it-works-titles">Choose your meals</span>
+              <span class="how-it-works-description"
+                >Choose from 32 dietitian designed options!
+              </span>
+            </div>
+          </figure>
+          <figure class="how-it-works-image-text-container">
+            <img src="/Images/HeatAndPlate.png" alt="" />
+            <div class="how-it-works-text-container">
+              <span class="how-it-works-titles">Heat and Plate</span>
+              <span class="how-it-works-description"
+                >Every meal comes with Chef heating instructions. Set the table,
+                plate your meal, and savor the experience.</span
+              >
+            </div>
+          </figure>
+          <figure class="how-it-works-image-text-container">
+            <img src="/Images/Repeat.png" alt="" />
+            <div class="how-it-works-text-container">
+              <span class="how-it-works-titles">Repeat</span>
+              <span class="how-it-works-description"
+                >Choose something new every week or stick with your staples.
+                We'll be in the kitchen cooking up your next mouth-watering
+                meal.</span
+              >
+            </div>
+          </figure>
+        </section>
+      </section>
+    </main>
+  </body>
+  <script src="./home.js"></script>
+</html>
