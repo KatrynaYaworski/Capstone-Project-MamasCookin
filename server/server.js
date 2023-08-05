@@ -6,7 +6,7 @@ const path = require('path')
 const session = require('express-session')
 const {SERVER_PORT} = process.env
 
-const { seed, getMenuItems, getCart, addToCart, deleteCart } = require('./controller')
+const { seed, getMenuItems, getCart, addToCart, deleteCart, adjustCartQuantity } = require('./controller')
 
 app.use(express.json())
 app.use(cors())
@@ -24,6 +24,7 @@ app.post('/seed', seed)
 
 app.get('/menu_items', getMenuItems)
 
+app.put('/cart/:id/:type', adjustCartQuantity)
 app.get('/cart', getCart)
 app.post('/cart', addToCart)
 app.delete('/cart/:id', deleteCart)

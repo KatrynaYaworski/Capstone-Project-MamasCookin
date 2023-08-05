@@ -23,58 +23,24 @@ const getCart = () => {
   return axios.get("http://localhost:4004/cart");
 };
 
+const adjustCartQuantity = (id, type) => {
+  console.log('testestest');
+  axios.put(`http://localhost:4004/cart/${id}/${type}`)
+  .then(()=> getMenuItems())
+  .catch((e) => console.log(`Error with adjusting the cart`, e));
+}
+
 const addToCart = (meal) => {
   axios
     .post("http://localhost:4004/cart", meal)
-    .then((res) => {
-      const itemCount = res.data.filter(
-        (item) => item.menu_id === meal.menu_id
-      ).length;
-      const totalItemCount = res.data.length;
-
-      if (totalItemCount === 1) {
-        headerTotalMealQuantity.textContent = `${totalItemCount} Meal selected`;
-        headerTotalMealPrice.textContent = `$${(totalItemCount * 7.99).toFixed(2)}`
-        const menuItem = document.querySelector(`#menu-item-${meal.menu_id}`);
-        menuItem.textContent = `${itemCount} Selected`;
-      } else {
-        const totalItemCount = res.data.length;
-        headerTotalMealQuantity.textContent = `${totalItemCount} Meals selected`;
-        headerTotalMealPrice.textContent = `$${(totalItemCount * 7.99).toFixed(2)}`
-        const menuItem = document.querySelector(`#menu-item-${meal.menu_id}`);
-        menuItem.textContent = `${itemCount} Selected`;
-      }
-    })
+    .then(()=>getMenuItems())
     .catch((e) => console.log(`Error with adding to the cart`, e));
 };
 
 const deleteFromCart = (id) => {
   axios
     .delete(`http://localhost:4004/cart/${id}`)
-    .then((res) => {
-      const itemCount = res.data.filter((item) => item.menu_id === id).length;
-      const totalItemCount = res.data.length;
-      if (itemCount !== 0) {
-        const menuItem = document.querySelector(`#menu-item-${id}`);
-        menuItem.textContent = `${itemCount} Selected`;
-      }
-      if (totalItemCount > 1) {
-        const totalItemCount = res.data.length;
-        headerTotalMealQuantity.textContent = `${totalItemCount} Meals selected`;
-        headerTotalMealPrice.textContent = `$${(totalItemCount * 7.99).toFixed(2)}`
-      }
-      if (totalItemCount < 1) {
-        headerTotalMealQuantity.textContent = `0 Meals selected`;
-        headerTotalMealPrice.textContent = `$${(totalItemCount * 7.99).toFixed(2)}`
-      }
-      if (itemCount < 1) {
-        const menuItem = document.querySelector(`#menu-item-${id}`);
-        menuItem.textContent = `0 Selected`;
-      } else {
-        headerTotalMealQuantity.textContent = `${totalItemCount} Meal selected`;
-        headerTotalMealPrice.textContent = `$${(totalItemCount * 7.99).toFixed(2)}`
-      }
-    })
+    .then(()=> getMenuItems())
     .catch((e) => console.log(`Error with deleting from the cart`, e));
 };
 
@@ -82,18 +48,7 @@ function displayMenu(res) {
   getCart()
     .then((cartResponse) => {
       menuItemsContainer.innerHTML = ''
-      const reducedCart = cartResponse.data.reduce((acc, obj) => {
-        // Check if the "name" property of the current object already exists in the accumulator
-      const existingObject = acc.find((item) => item.name === obj.name);
-      // If the object with the same name is not found in the accumulator, add the current object
-      if (!existingObject) {
-        acc.push(obj);
-      }else{
-          existingObject.quantity++
-      }
-      return acc;
-    }, []);
-      let totalQuantity = reducedCart.reduce((acc, curr) => {
+      let totalQuantity = cartResponse.data.reduce((acc, curr) => {
         acc += curr.quantity;
         return acc;
       }, 0);
@@ -162,7 +117,7 @@ function displayMenu(res) {
         buttonContainer.className = "button-container";
         const selectedData = document.createElement("span");
         selectedData.className = "selected-data";
-        const cartItem = reducedCart.find((item) => item.menu_id === meal.menu_id);
+        const cartItem = cartResponse.data.find((item) => item.menu_id === meal.menu_id);
         if (cartItem) {
           selectedData.textContent = `${cartItem.quantity} Selected`;
         } else {
@@ -180,10 +135,21 @@ function displayMenu(res) {
         buttonContainer.appendChild(selectedData);
         buttonContainer.appendChild(plusButton);
         mealButton.appendChild(outerButtonContainer);
-        plusButton.addEventListener("click", () => addToCart(meal));
-        minusButton.addEventListener("click", () =>
-          deleteFromCart(meal.menu_id)
-        );
+        console.log('1')
+        if(!cartItem){
+          console.log('2')
+        plusButton.addEventListener("click", () => addToCart(meal));}
+        else{
+          console.log('3')
+          plusButton.addEventListener("click",() => adjustCartQuantity(meal.menu_id,'increment'));
+        }
+        if(cartItem && cartItem.quantity === 1){
+          console.log('4')
+          minusButton.addEventListener("click", () => deleteFromCart(meal.menu_id));}
+          else if(cartItem && cartItem.quantity > 1){
+            console.log('5')
+            minusButton.addEventListener("click",() => adjustCartQuantity(meal.menu_id,'decrement'));
+          }
       });
     })
     .catch((e) => console.log(`Error with getting the cart`, e));

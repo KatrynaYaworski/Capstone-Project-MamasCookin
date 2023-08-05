@@ -3,24 +3,25 @@ const cartItemContainer = document.querySelector("#cart-items-container");
 const headerTotalMealPrice = document.querySelector("#os-price-total");
 const headerKitPrice = document.querySelector("#os-kit-price-quantity");
 
+const getCart = () => {
+  axios
+    .get("http://localhost:4004/cart")
+    .then(displayCart)
+    .catch((e) => console.log(`Error with getting the cart`, e));
+};
+
+const adjustCartQuantity = (id, type) => {
+  console.log("testestest");
+  axios
+    .put(`http://localhost:4004/cart/${id}/${type}`)
+    .then(getCart)
+    .catch((e) => console.log(`Error with adjusting the cart`, e));
+};
+
 const addToCart = (meal) => {
   axios
     .post("http://localhost:4004/cart", meal)
-    .then((res) => {
-      const itemCount = res.data.filter(
-        (item) => item.menu_id === meal.menu_id
-      ).length;
-      const totalItemCount = res.data.length;
-      headerTotalMealPrice.textContent = `$${(totalItemCount * 7.99 + 10.99).toFixed(2)}`;
-      headerKitPrice.textContent = `$${(totalItemCount * 7.99).toFixed(2)}`;
-      if (totalItemCount === 1) {
-        const menuItem = document.querySelector(`#menu-item-${meal.menu_id}`);
-        menuItem.textContent = `${itemCount} Selected`;
-      } else {
-        const menuItem = document.querySelector(`#menu-item-${meal.menu_id}`);
-        menuItem.textContent = `${itemCount} Selected`;
-      }
-    })
+    .then(getCart)
     .catch((e) => console.log(`Error with adding to the cart`, e));
 };
 
@@ -31,30 +32,15 @@ const deleteFromCart = (id) => {
     .catch((e) => console.log(`Error with deleting from the cart`, e));
 };
 
-const getCart = () => {
-  axios
-    .get("http://localhost:4004/cart")
-    .then(displayCart)
-    .catch((e) => console.log(`Error with getting the cart`, e));
-};
-
 function displayCart(res) {
-    cartItemContainer.innerHTML = ''
+  cartItemContainer.innerHTML = "";
   let cart = res.data;
-  const reducedCart = cart.reduce((acc, obj) => {
-      // Check if the "name" property of the current object already exists in the accumulator
-    const existingObject = acc.find((item) => item.name === obj.name);
-    // If the object with the same name is not found in the accumulator, add the current object
-    if (!existingObject) {
-      acc.push(obj);
-    }else{
-        existingObject.quantity++
-    }
+  let totalItemCount = cart.reduce((acc, curr) => {
+    acc += curr.quantity;
     return acc;
-  }, []);
-  const totalItemCount = cart.length;
-  reducedCart.forEach((meal) => {
-    let itemCount = cart.filter((item) => item.menu_id === meal.menu_id).length;
+  }, 0);
+
+  cart.forEach((meal) => {
     const preferencesContainer = document.createElement("div");
     preferencesContainer.className = "preference-container";
     const calorieSmart = document.createElement("span");
@@ -111,7 +97,7 @@ function displayCart(res) {
     buttonContainer.className = "button-container";
     const selectedData = document.createElement("span");
     selectedData.className = "selected-data";
-    selectedData.textContent = `${itemCount} Selected`;
+    selectedData.textContent = `${meal.quantity} Selected`;
     selectedData.id = `menu-item-${meal.menu_id}`;
     const plusButton = document.createElement("button");
     plusButton.className = "plus-button";
@@ -124,10 +110,19 @@ function displayCart(res) {
     buttonContainer.appendChild(selectedData);
     buttonContainer.appendChild(plusButton);
     mealButton.appendChild(outerButtonContainer);
-    plusButton.addEventListener("click", () => addToCart(meal));
-    minusButton.addEventListener("click", () => deleteFromCart(meal.menu_id));
+
+    plusButton.addEventListener("click", () =>
+      adjustCartQuantity(meal.menu_id, "increment")
+    );
+    if (meal.quantity === 1) {
+      minusButton.addEventListener("click", () => deleteFromCart(meal.menu_id));
+    } else if (meal.quantity > 1) {
+      minusButton.addEventListener("click", () =>
+        adjustCartQuantity(meal.menu_id, "decrement")
+      );
+    }
   });
-  headerTotalMealPrice.textContent = `$${(totalItemCount * 7.99 + 10.99).toFixed(2)}`;
+  headerTotalMealPrice.textContent = `$${(totalItemCount * 7.99 +10.99).toFixed(2)}`;
   headerKitPrice.textContent = `$${(totalItemCount * 7.99).toFixed(2)}`;
 }
 
@@ -136,23 +131,20 @@ function displayCart(res) {
 // Protein > 30 = Protein plus
 // Keto Where carbohydrates < 30 AND fat > 30 and protein < 44
 
-
 const modal = document.getElementById("myModal");
 const modalButton = document.getElementById("place-order-button");
 
-
 // When the user clicks on the button, open the modal
-modalButton.onclick = function() {
+modalButton.onclick = function () {
   modal.style.display = "block";
-}
-
+};
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
-    window.location.href= "../home/home.html"
+    window.location.href = "../home/home.html";
   }
-}
+};
 function dateLoad() {
   const week = 1000 * 60 * 60 * 24 * 7;
   const timeElapsed = Date.now() + week;
@@ -160,6 +152,6 @@ function dateLoad() {
   date.innerHTML = today.toDateString();
 }
 
-dateLoad()
+dateLoad();
 
 getCart();

@@ -98,14 +98,22 @@ module.exports = {
   },
 
   addToCart: (req, res) => {
-    if (!req.session.cart) {
-      req.session.cart = [];
-    }
-    // const {cart} = req.session; UNCOMMENT AND DELETE CART VAR AT TOP WHEN HOSTING
+     // const {cart} = req.session; UNCOMMENT AND DELETE CART VAR AT TOP WHEN HOSTING
     const { body } = req;
     body.quantity = (body.quantity || 0) + 1; // checks if body.quantity is truthy. If it exists and is truthy, it will use its current value. Then, we increment by 1.
     cart.push(body);
     res.status(200).send(cart);
+  },
+  adjustCartQuantity: (req, res) => {
+      // const {cart} = req.session;  UNCOMMENT AND DELETE CART VAR AT TOP WHEN HOSTING
+    const {id, type} = req.params;
+    let meal = cart.find(item => item.menu_id === +id);
+    if(type === 'increment'){
+      meal.quantity++
+    }else{
+      meal.quantity--
+    }
+    res.sendStatus(200);
   },
 
   deleteCart: (req, res) => {
