@@ -59,12 +59,15 @@ app.get("/users", getusers);
 app.post("/login", userLogin);
 app.delete("/login", logOut);
 
+app.get('/images/:image',(req,res) => {
+  res.sendFile(path.join(__dirname,`../public/images/${req.params.image}`))
+});
 
 app.get('/reset.css',(req,res) => {
   res.sendFile(path.join(__dirname,'../public/reset.css'))
 });
 
-app.get('/home.html',(req,res) => {
+app.get('/',(req,res) => {
   res.sendFile(path.join(__dirname,'../public/home/home.html'))
 });
 app.get('/home.css',(req,res) => {

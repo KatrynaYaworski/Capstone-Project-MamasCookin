@@ -107,7 +107,7 @@ module.exports = {
   addToCart: (req, res) => {
     const {cart} = req.session; 
     const { body } = req;
-    body.quantity = (body.quantity || 0) + 1; // checks if body.quantity is truthy. If it exists and is truthy, it will use its current value. Then, we increment by 1.
+    body.quantity = (body.quantity) + 1; // checks if body.quantity is truthy. If it exists and is truthy, it will use its current value. Then, we increment by 1.
     cart.push(body);
     res.status(200).send(cart);
   },
