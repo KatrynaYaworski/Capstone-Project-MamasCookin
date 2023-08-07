@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="./menu.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
-    <script src="https://kit.fontawesome.com/d08f329914.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/d08f329914.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Mama's Menu</title>
   </head>
   <body>
@@ -22,14 +25,14 @@
           ><button class="nav-buttons">Mama's Menu</button></a
         >
         <a href="../pickMeals/pickMeals.html"
-          ><button class="nav-buttons">Our Plans</button></a
+          ><button class="nav-buttons" id="plans">Pick Meals</button></a
         >
-        <button class="nav-buttons">FAQ</button>
-        <button class="nav-buttons">Contact Us</button>
+        <button class="nav-buttons"></button>
+        <button class="nav-buttons"></button>
       </div>
       <div class="nav-container-right">
         <button class="nav-buttons" id="log-in">Log in</button>
-        <button class="nav-buttons" id="sign-up">Sign up</button>
+        <!-- <button class="nav-buttons" id="sign-up">Sign up</button> -->
       </div>
     </nav>
     <header id="header-container">
@@ -47,21 +50,108 @@
           <!-- <button id="button-search" type="submit"></button> -->
         </form>
         <div class="filter-button-container">
-          <button class="filter-button" id="protein-plus-button">Protein Plus</button>
+          <button class="filter-button" id="protein-plus-button">
+            Protein Plus
+          </button>
           <button class="filter-button" id="keto-button">Keto</button>
-          <button class="filter-button" id="most-popular-button">Most Popular</button>
+          <button class="filter-button" id="most-popular-button">
+            Most Popular
+          </button>
           <button class="filter-button" id="calorie-smart-button">
             Calorie Smart
           </button>
-          <button class="filter-button" id="carb-smart-button">Carb Smart</button>
-          <button class="clear-filters" id="clear-filter"><i class="fa-solid fa-filter-circle-xmark" style="color: #ffffff;"></i></button>
+          <button class="filter-button" id="carb-smart-button">
+            Carb Smart
+          </button>
+          <button class="clear-filters" id="clear-filter">
+            <i
+              class="fa-solid fa-filter-circle-xmark"
+              style="color: #ffffff"
+            ></i>
+          </button>
         </div>
       </div>
     </header>
     <main>
+      <!-- The Login Modal -->
+      <div id="myModalLogin" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content-login">
+          <section id="modal-header">
+            <h4>Log in to Mama's Cookin</h4>
+            <span class="close-login">&times;</span>
+          </section>
+
+          <div id="modal-main-container">
+            <span id="input-form">
+              <div class="input-container">
+                <span class="input-label-containers" id="email-container">
+                  <label for="email-input">Email Address*</label>
+                  <input type="text" name="email" id="email-input" />
+                </span>
+                <span class="input-label-containers" id="password-container">
+                  <label for="password">Password *</label>
+                  <input type="password" name="password" id="Password-input" />
+                </span>
+              </div>
+            </span>
+            <button class="nav-buttons" id="log-in-modal">Log in</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Menu Modal -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div id="model-header-outer-container">
+            <section id="modal-header-container"></section>
+            <span class="close" id="close-span">&times;</span>
+          </div>
+          <section id="modal-middle-container">
+            <span id="modal-middle-left-container"> </span>
+
+            <span id="modal-middle-right-container">
+              <section id="mmr-heading-container">
+                <h4>Nutrition Per Serving</h4>
+              </section>
+              <!-- <div id="perServing"><h6>Per serving</h6></div> -->
+              <div id="nutrients-container">
+                <div class="nutrients" id="calories-modal-container">
+                  <span id="calories-modal-name">Calories</span>
+                  <span id="calories-modal">Calories</span>
+                </div>
+                <hr />
+                <div class="nutrients" id="fat-modal-container">
+                  <span id="fat-modal-name">Fat</span>
+                  <span id="fat-modal">Fat</span>
+                </div>
+                <hr />
+                <div class="nutrients" id="carbs-modal-container">
+                  <span id="carbs-modal-name">Carbohydrates</span>
+                  <span id="carbs-modal">Carbohydrates</span>
+                </div>
+                <hr />
+                <div class="nutrients" id="protein-modal-container">
+                  <span id="protein-modal-name">Protein</span>
+                  <span id="protein-modal">Protein</span>
+                </div>
+                <hr />
+                <div class="nutrients" id="sodium-modal-container">
+                  <span id="sodium-modal-name">Sodium</span>
+                  <span id="sodium-modal">Sodium</span>
+                </div>
+              </div>
+            </span>
+          </section>
+
+          <div id="modal-bottom-container">
+            <span id="modal-ingredients"> </span>
+          </div>
+        </div>
+      </div>
+
       <h2 id="meal-kits-text">Meal Kits</h2>
-      <section class="menu-items-container">
-      </section>
+      <section class="menu-items-container"></section>
     </main>
   </body>
   <script src="./menu.js"></script>

@@ -20,16 +20,16 @@
           ><button class="nav-buttons">Mama's Menu</button></a
         >
         <a href="../pickMeals/pickMeals.html"
-          ><button class="nav-buttons">Our Plans</button></a
+          ><button class="nav-buttons" id="plans">Pick Meals</button></a
         >
-        <button class="nav-buttons">FAQ</button>
-        <button class="nav-buttons">Contact Us</button>
+        <button class="nav-buttons"></button>
+        <button class="nav-buttons"></button>
       </div>
       <div class="nav-container-right">
-        <button class="nav-buttons" id="log-in">Log in</button>
-        <a href="../ourPlans/ourPlans.html"
+        <!-- <button class="nav-buttons" id="log-in">Log in</button> -->
+        <!-- <a href="../ourPlans/ourPlans.html"
           ><button class="nav-buttons" id="sign-up">Sign up</button></a
-        >
+        > -->
       </div>
     </nav>
     <main>
@@ -47,23 +47,51 @@
             <h1>Mama's cookin', Made Easy</h1>
             <h4>Fresh ready made meals delivered right to your door</h4>
           </div>
-          <a href="../ourPlans/ourPlans.html"
+          <a href="../pickMeals/pickMeals.html"
             ><button class="green-main-buttons" id="get-started">
               Get Started
             </button></a
           >
         </section>
       </div>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <section id="modal-header">
+            <h4>Log in to Mama's Cookin</h4>
+            <span class="close">&times;</span>
+          </section>
+
+          <div id="modal-main-container">
+            <span id="input-form">
+              <div class="input-container">
+                <span class="input-label-containers" id="email-container">
+                  <label for="email-input">Email Address*</label>
+                  <input type="text" name="email" id="email-input" />
+                </span>
+                <span class="input-label-containers" id="password-container">
+                  <label for="password">Password *</label>
+                  <input type="password" name="password" id="Password-input" />
+                </span>
+              </div>
+              <div id="error-message"></div>
+            </span>
+            <button class="nav-buttons" id="log-in-modal">Log in</button>
+          </div>
+        </div>
+      </div>
+
       <section class="how-it-works-container">
         <h2>How It Works</h2>
         <section id="how-it-works-icon-container">
           <figure class="how-it-works-image-text-container">
             <img src="/Images/SetPreferences.png" alt="" />
             <div class="how-it-works-text-container">
-              <span class="how-it-works-titles">Set your preferences</span>
+              <span class="how-it-works-titles">Select preferences</span>
               <span class="how-it-works-description"
-                >Let us know what you love to eat, then choose your meal plan
-                from 4 to 16 meals per order.</span
+                >Filter by your diet, then choose your meal plan.</span
               >
             </div>
           </figure>

@@ -160,7 +160,7 @@ module.exports = [
         protein: 33,
         sodium: 830,
         ingredients: "Salmon (Salmon, Color Added Via Feed (Astaxanthin)), Russet Potatoes, Water, Concentrated Crushed Tomatoes (Tomatoes, Salt, Citric Acid), Great Northern Beans (Great Northern Beans, Water, Salt, Calcium Chloride), Pearl Onions, Fire Roasted Diced Tomatoes (Tomatoes, Tomato Juice, Sea Salt, Calcium Chloride, Citric Acid), Garlic, Roasted Garlic Oil (Olive Pomace Oil, Garlic), Capers (Capers, Water, Vinegar, Salt), Parsley, Sea Salt, Rosemary, Tomato Powder (Tomato Powder, Silicon Dioxide (Anti-Caking Agent)), Olive Pomace Oil, Thyme, Toasted Garlic, Granulated Garlic, Dried Basil, Dried Oregano, Gochugaru Chile Flakes\n",
-        name: "Tuscan Baked Salmon & Tomato-Caper Sauce",
+        name: "Tuscan Baked Salmon",
         image_url: "https://images.everyplate.com/c_fill,f_auto,fl_lossy,h_625,q_auto,w_1230/everyplate_s3/image/649f070a0cb992f7059806a4-a56d280a.jpeg",
         prep_cook_time: 120
     },

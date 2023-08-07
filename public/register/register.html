@@ -20,13 +20,13 @@
         /></a>
       </span>
       <div class="nav-container">
-        <a href="../ourPlans/ourPlans.html"
+        <!-- <a href="../ourPlans/ourPlans.html"
           ><button class="nav-buttons" id="select-plan-bc">
             <i class="fa-regular fa-square-check" style="color: #008000"></i>
             Select Plans
           </button></a
         >
-        <button class="nav-buttons" id="nav-" style="color: #008000">-</button>
+        <button class="nav-buttons" id="nav-" style="color: #008000">-</button> -->
         <a href="../pickMeals/pickMeals.html"
           ><button class="nav-buttons" id="pick-meals-bc">
             <i class="fa-solid fa-utensils" style="color: #008000"></i> Pick
@@ -53,61 +53,70 @@
         <span id="delivery-address-container"
           ><h6 id="customer-data-heading">Delivery Address</h6></span
         >
-        <form id="input-form" action="">
+        <span id="input-form" action="">
           <div class="input-container">
             <span class="input-label-containers" id="first-name-container">
               <label for="first-name-input">Name *</label>
-              <input type="text" name="" id="first-name-input" />
+              <input type="text" name="firstName" id="first-name-input" />
             </span>
             <span class="input-label-containers" id="last-name-container">
               <label for="last-name-input">Last Name *</label>
-              <input type="text" name="" id="last-name-input" />
+              <input type="text" name="lastName" id="last-name-input" />
             </span>
           </div>
           <div class="input-container">
             <span class="input-label-containers" id="address-line-container">
               <label for="address-line-input">Address *</label>
-              <input type="text" name="" id="address-line-input" />
+              <input type="text" name="address" id="address-line-input" />
             </span>
             <span
               class="input-label-containers"
               id="address-line-two-container"
             >
               <label for="address-line-two-input">Address Line 2 *</label>
-              <input type="text" name="adress2" id="address-line-two-input" />
+              <input
+                type="text"
+                name="addressTwo"
+                id="address-line-two-input"
+              />
             </span>
           </div>
           <div class="input-container">
             <span class="input-label-containers" id="city-container">
               <label for="city-input">City *</label>
-              <input type="text" name="" id="city-input" />
+              <input type="text" name="city" id="city-input" />
             </span>
             <span class="input-label-containers" id="state-container">
               <label for="state-input">State *</label>
-              <input type="text" name="" id="state-input" />
+              <input type="text" name="state" id="state-input" />
             </span>
             <span class="input-label-containers" id="zipcode-container">
               <label for="zipcode-input">Zipcode *</label>
-              <input type="text" name="" id="zipcode-input" />
+              <input type="text" name="zipcode" id="zipcode-input" />
             </span>
           </div>
           <div class="input-container">
             <span class="input-label-containers" id="phone-container">
               <label for="phone-number-input">Phone Number *</label>
-              <input type="text" maxlength="16" id="phone-number-input" />
+              <input
+                type="text"
+                maxlength="16"
+                name="phone"
+                id="phone-number-input"
+              />
             </span>
           </div>
           <div class="input-container" id="email-pass-container">
             <span class="input-label-containers" id="email-container">
               <label for="email-input">Email</label>
-              <input type="text" name="" id="email-input" />
+              <input type="text" name="email" id="email-input" />
             </span>
             <span class="input-label-containers" id="password-container">
               <label for="password-input">Password</label>
-              <input type="password" name="" id="password-input" />
+              <input type="password" name="password" id="password-input" />
             </span>
           </div>
-        </form>
+        </span>
       </section>
       <section id="os-container">
         <section id="os-main-container">
@@ -131,14 +140,14 @@
           <hr />
           <div id="os-botton-section-container">
             <div id="os-price-container">
-            <span id="os-price-text">Kit total</span>
-            <span id="os-price-total"></span>
-        </div>
+              <span id="os-price-text">Kit total</span>
+              <span id="os-price-total"></span>
+            </div>
           </div>
         </section>
         <a href="../payment/payment.html">
-        <button id="next-button">Next</button>
-    </a>
+          <button id="next-button">Next</button>
+        </a>
         <span id="os-message-container">
           <img id="os-message-img" src="/Images/editedLogo.png" alt="" />
           <div id="os-message">

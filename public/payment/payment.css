@@ -3,54 +3,62 @@
 
 /* breadcrumb */
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 100px;
-} 
-.logo-container{
-  width: 150px;
 }
 
-.logo{
+.logo-container {
+    width: 150px;
+}
+
+.logo {
     height: 100px;
     width: 120px;
     cursor: pointer;
 }
-.nav-buttons{
+
+.nav-buttons {
     background-color: transparent;
     border-color: transparent;
     font-size: large;
     font-family: 'Mulish', sans-serif;
 }
-.nav-container{
+
+.nav-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
     align-items: center;
     padding: 0 350px;
 }
-#select-plan-bc{
+
+#select-plan-bc {
     color: green;
     font-weight: bolder;
     cursor: pointer;
 }
-#nav-{
+
+#nav- {
     color: green;
 
 }
-#pick-meals-bc{
+
+#pick-meals-bc {
     color: green;
     font-weight: bolder;
     cursor: pointer;
 }
-#register-bc{
+
+#register-bc {
     color: green;
     font-weight: bolder;
     cursor: pointer;
 }
-#payment-bc{
+
+#payment-bc {
     color: green;
     font-weight: bolder;
     cursor: pointer;
@@ -60,66 +68,61 @@ nav{
 
 
 
-
-
-
 /* Modal */
 
-/* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content/Box */
+.modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     border-radius: 6px;
-    width: 40%; /* Could be more or less, depending on screen size */
-    
-  }
+    width: 40%;
+}
 
-  #modal-text{
+#modal-text {
     font-family: 'Manrope', sans-serif;
     font-size: xx-large;
 
-  }
+}
 
-  #modal-data-conatiner{
+#modal-data-conatiner {
     display: flex;
     justify-content: space-evenly;
-   flex-direction: column;
-   align-items: center;
-   height: 25vh;
-  }
-  
-  /* The Close Button */
-  .close {
+    flex-direction: column;
+    align-items: center;
+    height: 25vh;
+}
+
+/* The Close Button */
+.close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
-  #okay-button{
+#okay-button {
     font-family: 'Manrope', sans-serif;
     border-radius: 8px;
     padding: 10px;
@@ -128,18 +131,18 @@ nav{
     background-color: rgb(83, 118, 19);
     color: white;
     cursor: pointer;
-    box-shadow: inset 0 0 0 0  rgb(96, 135, 60);
+    box-shadow: inset 0 0 0 0 rgb(96, 135, 60);
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
 
 #okay-button:hover {
-    box-shadow: inset 200px 0 0 0  rgb(96, 135, 60);
+    box-shadow: inset 200px 0 0 0 rgb(96, 135, 60);
     color: white;
-  }
+}
 
 
-  #date-container{
+#date-container {
     font-size: medium;
     font-family: 'Manrope', sans-serif;
 }
@@ -149,12 +152,9 @@ nav{
 
 
 
-
-
-
 /* Main */
 
-#main-section-container{
+#main-section-container {
     background-color: rgb(247, 244, 234);
     display: flex;
     justify-content: center;
@@ -162,13 +162,12 @@ nav{
     width: 100%;
     /* height: 85vh */
 }
+
 /* Main */
 
 /* Customer Data - Delivery Address */
-#customer-data-outer-container{
-    display: flex; 
-    /* background-color: white; */
-   
+#customer-data-outer-container {
+    display: flex;
     border-radius: 6px;
     border-color: grey;
     flex-direction: column;
@@ -176,68 +175,71 @@ nav{
     margin-right: 50px;
     height: fit-content;
 }
-#customer-data-container{
+
+#customer-data-container {
     padding: 25px 25px;
-    display: flex; 
+    display: flex;
     background-color: white;
     border-radius: 6px;
     border-color: grey;
     flex-direction: column;
-    /* width: 90%; */
     height: fit-content;
 
-  }
-  #card-box{
+}
+
+#card-box {
     border: 1px solid rgb(164, 164, 164);
     background-color: rgb(247, 244, 234);
-  }
-  #credit-or-debit-container{
+}
+
+#credit-or-debit-container {
     padding: 15px;
     background-color: white;
     display: flex;
     justify-content: space-between;
     font-family: 'Manrope', sans-serif;
 
-  }
+}
 
- 
-  #delivery-card-number-container{
+
+#delivery-card-number-container {
     display: flex;
     justify-content: start;
-    /* align-items: start; */
-  }
-#customer-data-heading{
+}
+
+#customer-data-heading {
     font-family: 'Manrope', sans-serif;
     font-weight: bolder;
     font-size: x-large;
     color: grey;
     padding-bottom: 20px;
 }
-label{
+
+label {
     font-size: large;
     font-family: 'Mulish', sans-serif;
     color: rgb(93, 93, 93);
     padding-bottom: 10px;
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
-    /* align-self: center; */
 }
-.input-container{
+
+.input-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
-.input-label-containers{
+
+.input-label-containers {
     display: flex;
-    /* justify-content: center; */
     flex-direction: column;
     padding: 10px;
 }
 
-input{
+input {
     border-radius: 5px;
     border-color: rgb(220, 218, 218);
     padding: 15px 0;
@@ -246,20 +248,21 @@ input{
     font-size: large;
     color: rgb(66, 66, 66);
 }
+
 input:focus {
     outline: darkgreen;
 }
 
 
-#card-number-line-container{
+#card-number-line-container {
     width: 100%;
 }
 
-#expiration-container{
+#expiration-container {
     width: 50%;
 }
 
-#cvc-container{
+#cvc-container {
     width: 50%;
 }
 
@@ -268,16 +271,16 @@ input:focus {
 
 
 /* Order Summary */
-#os-container{
+#os-container {
     display: flex;
     flex-direction: column;
-   padding-right: 100px;
+    padding-right: 100px;
     border-color: grey;
     width: 35%;
     height: fit-content;
 }
 
-#os-main-container{
+#os-main-container {
     background-color: white;
     padding: 25px;
     border-radius: 6px;
@@ -285,30 +288,33 @@ input:focus {
     margin-bottom: 25px;
 }
 
-.order-summary-heading{
+.order-summary-heading {
     font-size: x-large;
     font-family: 'Manrope', sans-serif;
     padding-bottom: 15px;
 }
-#os-image{
+
+#os-image {
     height: 100px;
     width: 100px;
 }
 
 /* midsection */
-#os-mid-section-container{
+#os-mid-section-container {
     display: flex;
     flex-direction: column;
     font-size: large;
     font-family: 'Mulish', sans-serif;
     color: rgb(0, 0, 0);
 }
-#kit-name-quantity-container{
+
+#kit-name-quantity-container {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
 }
-#kit-shipping-data{
+
+#kit-shipping-data {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
@@ -316,7 +322,7 @@ input:focus {
 }
 
 
-#os-price-container{
+#os-price-container {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
@@ -334,7 +340,7 @@ input:focus {
    
 } */
 
-#cart-items-container{
+#cart-items-container {
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -342,65 +348,74 @@ input:focus {
     background-color: white;
     justify-content: space-between;
 }
-.menu-image{
+
+.menu-image {
     height: 130px;
     width: 250px;
 }
-.meal-buttons{
+
+.meal-buttons {
     display: flex;
-    /* justify-content: center; */
     flex-direction: column;
     margin-top: 30px;
     background-color: white;
     padding: 0;
     cursor: pointer;
-    border: 1px solid #eee; 
+    border: 1px solid #eee;
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
     transition: all .3s ease-in-out;
 }
+
 .meal-buttons:hover {
     box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
     transform: translate3d(0px, -1px, 0px);
 }
 
 
-.meal-title{
+.meal-title {
     font-family: 'Manrope', sans-serif;
     margin: 5px 5px;
 }
-.preferences{
+
+.preferences {
     border-radius: 2px;
     color: white;
     margin: 5px 5px;
 }
-#calorie-smart{
-    background-color:darkcyan;
+
+#calorie-smart {
+    background-color: darkcyan;
     padding: 0 9px;
 }
-#protein-plus{
-    background-color:rgba(139, 0, 0, 0.719);
+
+#protein-plus {
+    background-color: rgba(139, 0, 0, 0.719);
     padding: 0 9px;
 }
-#keto{
-    background-color:rgb(188, 168, 18);
+
+#keto {
+    background-color: rgb(188, 168, 18);
     padding: 0 9px;
 }
-#carb-smart{
-    background-color:rgb(0, 81, 139);
+
+#carb-smart {
+    background-color: rgb(0, 81, 139);
     padding: 0 9px;
 }
-#populars{
-    background-color:rgb(79, 0, 139);
+
+#populars {
+    background-color: rgb(79, 0, 139);
     padding: 0 9px;
 }
-.preference-container{
+
+.preference-container {
     display: flex;
     justify-content: start;
     align-items: start;
     height: 25px;
 }
 
-.outer-button-container{
+.outer-button-container {
     display: flex;
     align-items: center;
     width: 100%;
@@ -409,7 +424,7 @@ input:focus {
 
 }
 
-.button-container{
+.button-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -418,18 +433,19 @@ input:focus {
     width: 75%;
 }
 
-.plus-button{
+.plus-button {
     background-color: transparent;
     border-color: transparent;
     color: white;
     font-size: x-large;
     cursor: pointer;
 }
+
 .plus-button:hover {
     color: grey;
 }
 
-.minus-button{
+.minus-button {
     background-color: transparent;
     border-color: transparent;
     color: white;
@@ -441,28 +457,27 @@ input:focus {
     color: grey;
 }
 
-.selected-data{
+.selected-data {
     font-family: 'Mulish', sans-serif;
     color: white;
 }
 
 
-
-
-#place-order-button-container{
+#place-order-button-container {
     background-color: rgb(247, 244, 234);
     display: flex;
     justify-content: center;
     padding-bottom: 15px;
 }
 
-#place-order-button{
+#place-order-button {
     font-size: large;
     border-radius: 8px;
     padding: 5px;
     border-color: transparent;
     width: 60vw;
-    background-color: rgb(105, 129, 83);;
+    background-color: rgb(105, 129, 83);
+    ;
     color: white;
     cursor: pointer;
     box-shadow: inset 0 0 0 0 rgb(96, 135, 60);
@@ -474,28 +489,32 @@ input:focus {
     background-color: rgb(96, 135, 60);
     color: white;
 }
-#os-message{
+
+#os-message {
     padding-top: 10px;
     font-family: 'Mulish', sans-serif;
     font-size: small;
 
 }
-#span-qas{
+
+#span-qas {
     width: 100%;
 }
-#os-message-calendar{
+
+#os-message-calendar {
     padding-top: 10px;
     padding-left: 10px;
     font-family: 'Mulish', sans-serif;
     font-size: small;
     height: 5vh;
 }
-h2{
+
+h2 {
     font-family: 'Manrope', sans-serif;
     margin-bottom: 2px;
 }
 
-#icon-container-os{
+#icon-container-os {
     margin-top: 10px;
     display: flex;
     flex-direction: row;
@@ -503,8 +522,9 @@ h2{
     justify-content: space-around;
 }
 
-#os-message{
-height: 5vh;
-margin-left: 5px;
+#os-message {
+    height: 5vh;
+    margin-left: 5px;
 }
+
 /* Order Summary */

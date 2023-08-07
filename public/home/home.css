@@ -1,204 +1,333 @@
   @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Mulish:wght@300&display=swap');
 
-/* body{
-    padding: 0 2%;
-} */
-
-/* Nav Bar */
-.logo{
-    height: 100px;
-    width: 120px;
-    cursor: pointer;
-}
-.nav-container-right{
-    display: flex;
-    align-items: center;
-}
-
-.nav-container-left{
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
-    align-items: center;
-}
-.nav-buttons{
-    background-color: transparent;
-    border-color: transparent;
-    font-size: x-large;
-    cursor:pointer;
-}
-
-.nav-buttons:hover {
-    color: green;
-}
-
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 100px;
-}
-
-#log-in{
-    margin-right: 40px;
-    cursor: pointer;
-}
-
-#sign-up{
-    border-radius: 8px;
-    padding: 10px;
-    width: 9vw;
-    background-color: rgb(83, 118, 19);
-    color: white;
-    cursor: pointer;
-    box-shadow: inset 0 0 0 0  rgb(96, 135, 60);
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-}
 
 
-#sign-up:hover {
-    box-shadow: inset 200px 0 0 0  rgb(96, 135, 60);
-    color: white;
+  /* Nav Bar */
+  .logo {
+      height: 100px;
+      width: 120px;
+      cursor: pointer;
   }
+
+  .nav-container-right {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      width: 25%;
+  }
+
+  .nav-container-left {
+      display: flex;
+      justify-content: space-between;
+      width: 60%;
+      align-items: center;
+  }
+
+  .nav-buttons {
+      background-color: transparent;
+      border-color: transparent;
+      font-size: x-large;
+      cursor: pointer;
+  }
+
+  .nav-buttons:hover {
+      color: green;
+  }
+
+  nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 100px;
+  }
+
+  #log-in {
+      cursor: pointer;
+  }
+
+  #log-in {
+      border-radius: 8px;
+      padding: 10px;
+      width: 9vw;
+      background-color: rgb(83, 118, 19);
+      color: white;
+      cursor: pointer;
+      box-shadow: inset 0 0 0 0 rgb(96, 135, 60);
+      transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+
+
+  #log-in:hover {
+      box-shadow: inset 200px 0 0 0 rgb(96, 135, 60);
+      color: white;
+  }
+
+  #log-out {
+      cursor: pointer;
+  }
+
+  #log-out {
+      border-radius: 8px;
+      padding: 10px;
+      width: 9vw;
+      background-color: rgb(83, 118, 19);
+      color: white;
+      cursor: pointer;
+      box-shadow: inset 0 0 0 0 rgb(96, 135, 60);
+      transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+
+
+  #log-out:hover {
+      box-shadow: inset 200px 0 0 0 rgb(96, 135, 60);
+      color: white;
+  }
+
   /* Nav Bar */
 
 
-/* Mid content with Video */
-.hero-image-content{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    height: 20%;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    z-index: 5;
-    position: absolute;
-    top: 33%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+  /* Mid content with Video */
+  .hero-image-content {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      height: 20%;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      z-index: 5;
+      position: absolute;
+      top: 33%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
 
 
-h1{
-    font-size: 65px;
-    font-family: 'Manrope', sans-serif;
-    color: black;
-    z-index: 5;
-    margin-bottom: 10px;
-}
+  h1 {
+      font-size: 65px;
+      font-family: 'Manrope', sans-serif;
+      color: black;
+      z-index: 5;
+      margin-bottom: 10px;
+  }
 
-h4{
-    font-size: 20px;
-    font-family: 'Manrope', sans-serif;
-    color: black;
-    z-index: 5;
-    margin-bottom: 50px;
-}
+  h4 {
+      font-size: 20px;
+      font-family: 'Manrope', sans-serif;
+      color: black;
+      z-index: 5;
+      margin-bottom: 50px;
+  }
 
-h2{
-    margin: 15px 0;
-    font-size: 30px;
-    font-family: 'Manrope', sans-serif;
-    font-weight: bolder;
-    color: grey;
-    
-}
+  h2 {
+      margin: 15px 0;
+      font-size: 30px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: bolder;
+      color: grey;
 
-#video{
-    transform: translate(0, -290px);
-    /* could be -180? ^ */
-    width: 100%;
-}
+  }
 
-.container-video {
-    position:relative;
-    height: 47vh;
-    overflow: hidden;
-    width: 100vw;
-}
+  #video {
+      transform: translate(0, -290px);
+      /* could be -180 ^ */
+      width: 100%;
+  }
 
-#get-started{
-    font-size: xx-large;
-    border-radius: 8px;
-    padding: 10px;
-    border-color: transparent;
-    width: 15vw;
-    background-color: rgb(83, 118, 19);
-    color: white;
-    cursor: pointer;
-    box-shadow: inset 0 0 0 0 rgb(96, 135, 60);
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-}
+  .container-video {
+      position: relative;
+      height: 47vh;
+      overflow: hidden;
+      width: 100vw;
+  }
 
-#get-started:hover {
-    box-shadow: inset 15vw 0 0 0 rgb(96, 135, 60);
-    color: white;
-}
+  #get-started {
+      font-size: xx-large;
+      border-radius: 8px;
+      padding: 10px;
+      border-color: transparent;
+      width: 15vw;
+      background-color: rgb(83, 118, 19);
+      color: white;
+      cursor: pointer;
+      box-shadow: inset 0 0 0 0 rgb(96, 135, 60);
+      transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
 
-/* Mid content with Video */
+  #get-started:hover {
+      box-shadow: inset 15vw 0 0 0 rgb(96, 135, 60);
+      color: white;
+  }
 
-
-
-/* how it works section */
-
-main {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.how-it-works-container{
-    text-align: center;
-}
-
-.how-it-works-icon-container{
-    display: flex;
-    width: 100%;
-}
-.how-it-works-description{
-    display: inline-block;
-    font-family: 'Mulish', sans-serif;
-    padding: 0 10%;
-}
-
-.how-it-works-titles{
-    display: inline-block;
-    font-weight: bolder;
-    font-size: larger;
-    font-family: 'Manrope', sans-serif;
-    width: 100%;
-    min-height: 30px;
-    
-}
-
-.how-it-works-image-text-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 250px;
-    width: 24%;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.how-it-works-text-container{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: baseline;
-}
-
-img{
-    height: 150px;
-    width: 200px;
-}
-
-/* how it works section */
+  /* Mid content with Video */
 
 
+  /* Modal */
+
+  /* The Modal (background) */
+  .modal {
+      display: none;
+      position: fixed;
+      z-index: 6;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px 0;
+      border: 1px solid #888;
+      width: 30%;
+      border-radius: 10px;
+  }
+
+  #modal-main-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  #modal-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 15px;
+  }
+
+  /* The Close Button */
+  .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+  }
+
+  #log-in-modal {
+      border-radius: 8px;
+      padding: 10px;
+      width: 9vw;
+      background-color: rgb(83, 118, 19);
+      color: white;
+      cursor: pointer;
+      box-shadow: inset 0 0 0 0 rgb(96, 135, 60);
+      transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+
+  #log-in-modal:hover {
+      box-shadow: inset 200px 0 0 0 rgb(96, 135, 60);
+      color: white;
+  }
+
+  #input-form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      /* justify-content: space-around; */
+      /* align-self: center; */
+  }
+
+  .input-label-containers {
+      display: flex;
+      /* justify-content: center; */
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  input {
+      border-radius: 5px;
+      border-color: rgb(220, 218, 218);
+      padding: 15px 0;
+      border-width: .5px;
+      font-family: 'Mulish', sans-serif;
+      font-size: large;
+      color: rgb(66, 66, 66);
+  }
+
+  input:focus {
+      outline: solid darkgreen;
+  }
+
+  label {
+      font-size: large;
+      font-family: 'Mulish', sans-serif;
+      color: rgb(93, 93, 93);
+      padding-bottom: 10px;
+  }
+
+
+
+
+
+  /* how it works section */
+
+  main {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+
+  .how-it-works-container {
+      margin-top: 25px;
+      text-align: center;
+  }
+
+
+  .how-it-works-description {
+      display: inline-block;
+      font-family: 'Mulish', sans-serif;
+      padding: 0 10%;
+  }
+
+  .how-it-works-titles {
+      display: inline-block;
+      font-weight: bolder;
+      font-size: larger;
+      font-family: 'Manrope', sans-serif;
+      width: 100%;
+      min-height: 30px;
+
+  }
+
+  .how-it-works-image-text-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 250px;
+      width: 24%;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+  }
+
+  .how-it-works-text-container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: baseline;
+  }
+
+  img {
+      height: 150px;
+      width: 200px;
+  }
+
+  /* how it works section */

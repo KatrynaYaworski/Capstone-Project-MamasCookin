@@ -1,4 +1,7 @@
-/* bread crumb */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Mulish:wght@300&display=swap');
+
+/* breadcrumb */
 
 nav{
     display: flex;
@@ -6,9 +9,35 @@ nav{
     justify-content: space-between;
     padding: 0 100px;
 } 
+.logo-container{
+  width: 150px;
+}
 
 .logo{
     height: 100px;
     width: 120px;
     cursor: pointer;
 }
+.nav-buttons{
+    background-color: transparent;
+    border-color: transparent;
+    font-size: large;
+    font-family: 'Mulish', sans-serif;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 0 350px;
+}
+#select-plan-bc{
+    color: green;
+    font-weight: bolder;
+}
+#nav-{
+    color: green;
+
+}
+
+/* breadcrumb */

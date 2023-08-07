@@ -6,51 +6,65 @@
     <link rel="stylesheet" href="../reset.css" />
     <link rel="stylesheet" href="../pickMeals/pickMeals.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
-    <script src="https://kit.fontawesome.com/d08f329914.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/d08f329914.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Pick Meals</title>
   </head>
   <body>
     <nav>
       <span class="logo-container">
         <a href="/public/home/home.html"
-        ><img class="logo" src="/Images/MamasCookin-Logo.png" alt=""
+          ><img class="logo" src="/Images/MamasCookin-Logo.png" alt=""
         /></a>
       </span>
       <div class="nav-container">
-        <a href="../ourPlans/ourPlans.html"
+        <!-- <a href="../ourPlans/ourPlans.html"
           ><button class="nav-buttons" id="select-plan-bc"><i class="fa-regular fa-square-check" style="color: #008000;"></i>  Select Plans</button></a
         >
-        <button class="nav-buttons" id="nav-" style="color: #008000;">-</button>
+        <button class="nav-buttons" id="nav-" style="color: #008000;">-</button> -->
         <a href="./pickMeals.html"
-          ><button class="nav-buttons" id="pick-meals-bc"><i class="fa-solid fa-utensils" style="color: #008000;"></i>  Pick Meals</button></a
+          ><button class="nav-buttons" id="pick-meals-bc">
+            <i class="fa-solid fa-utensils" style="color: #008000"></i> Pick
+            Meals
+          </button></a
         >
-        <button class="nav-buttons" id="nav--" style="color: #008000;">-</button>
+        <button class="nav-buttons" id="nav--" style="color: #008000">-</button>
         <a href=""
-          ><button class="nav-buttons" id="register-bc"><i class="fa-regular fa-address-book"></i>  Register</button></a
+          ><button class="nav-buttons" id="register-bc">
+            <i class="fa-regular fa-address-book"></i> Register
+          </button></a
         >
         <button class="nav-buttons" id="nav---">-</button>
         <a href=""
-          ><button class="nav-buttons" id="payment-bc"><i class="fa-regular fa-credit-card"></i>  Payment</button></a
+          ><button class="nav-buttons" id="payment-bc">
+            <i class="fa-regular fa-credit-card"></i> Payment
+          </button></a
         >
       </div>
     </nav>
     <header class="header-container">
-      <span id="date-container"><i class="fa-solid fa-truck" id="date"></i></span>
+      <span id="date-container"
+        ><i class="fa-solid fa-truck" id="date"></i
+      ></span>
       <section id="dynamic-meal-details-container">
-      <div id="dm-quantity-container"><span id="dynamic-meal-quantity">0 Meals selected</span></div>
+        <div id="dm-quantity-container">
+          <span id="dynamic-meal-quantity">0 Meals selected</span>
+        </div>
         <div id="dm-price-container"><span id="dynamic-meal-price"></span></div>
       </section>
       <a href="../register/register.html">
-      <button id="save-button">Save</button>
-    </a>
+        <button id="save-button">Save</button>
+      </a>
     </header>
     <div id="search-filter-box">
-    <div id="search-filter-container">
-      <form id="search-form">
-        <input
-        id="search-input"
-        type="search"
-          placeholder="Search all of our recipes"
+      <div id="search-filter-container">
+        <form id="search-form">
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Search all of our recipes"
           />
           <!-- <button id="button-search" type="submit"></button> -->
         </form>
@@ -59,20 +73,29 @@
             Protein Plus
           </button>
           <button class="filter-button" id="keto-button">Keto</button>
-          <button class="filter-button" id="most-popular-button">Most Popular</button>
+          <button class="filter-button" id="most-popular-button">
+            Most Popular
+          </button>
           <button class="filter-button" id="calorie-smart-button">
             Calorie Smart
           </button>
-          <button class="filter-button" id="carb-smart-button">Carb Smart</button>
-          <button class="clear-filters" id="clear-filter"><i class="fa-solid fa-filter-circle-xmark" style="color: #ffffff;"></i></button>
+          <button class="filter-button" id="carb-smart-button">
+            Carb Smart
+          </button>
+          <button class="clear-filters" id="clear-filter">
+            <i
+              class="fa-solid fa-filter-circle-xmark"
+              style="color: #ffffff"
+            ></i>
+          </button>
         </div>
       </div>
     </div>
     <section id="main-section-container">
       <main>
         <div id="my-meals-text-container">
-        <h2 id="my-meals-text">My Meals</h2>
-      </div>
+          <h2 id="my-meals-text">My Meals</h2>
+        </div>
         <section class="menu-items-container"></section>
       </main>
     </section>

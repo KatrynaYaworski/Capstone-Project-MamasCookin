@@ -1,5 +1,7 @@
+// grabbing container to put cart items into.
 const cartItemContainer = document.querySelector("#cart-items-container");
 
+// grabbing dynamic header tags
 const headerTotalMealPrice = document.querySelector("#os-price-total");
 const headerKitPrice = document.querySelector("#os-kit-price-quantity");
 
@@ -70,6 +72,11 @@ function displayCart(res) {
     mealTitle.className = "meal-title";
     mealButton.appendChild(mealTitle);
 
+    //Preference rules
+    // calories < 500 = calorie smart
+    // Protein > 30 = Protein plus
+    // Keto Where carbohydrates < 30 AND fat > 30 and protein < 44
+
     if (meal.carbohydrates < 30 && meal.fat > 30 && meal.protein < 44) {
       preferencesContainer.appendChild(keto);
       keto.textContent = "Keto";
@@ -122,14 +129,12 @@ function displayCart(res) {
       );
     }
   });
-  headerTotalMealPrice.textContent = `$${(totalItemCount * 7.99 +10.99).toFixed(2)}`;
+  headerTotalMealPrice.textContent = `$${(
+    totalItemCount * 7.99 +
+    10.99
+  ).toFixed(2)}`;
   headerKitPrice.textContent = `$${(totalItemCount * 7.99).toFixed(2)}`;
 }
-
-//Preference rules
-// calories < 500 = calorie smart
-// Protein > 30 = Protein plus
-// Keto Where carbohydrates < 30 AND fat > 30 and protein < 44
 
 const modal = document.getElementById("myModal");
 const modalButton = document.getElementById("place-order-button");
@@ -145,6 +150,8 @@ window.onclick = function (event) {
     window.location.href = "../home/home.html";
   }
 };
+
+//function to load the dynamic order date
 function dateLoad() {
   const week = 1000 * 60 * 60 * 24 * 7;
   const timeElapsed = Date.now() + week;

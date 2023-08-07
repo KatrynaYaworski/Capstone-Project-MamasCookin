@@ -3,67 +3,69 @@
 
 
 /* Nav Bar */
-.logo{
+.logo {
     height: 100px;
     width: 120px;
     cursor: pointer;
 }
 
-.nav-container-right{
+.nav-container-right {
     display: flex;
     align-items: center;
 }
 
-.nav-container-left{
+.nav-container-left {
     display: flex;
     justify-content: space-between;
     width: 60%;
     align-items: center;
 }
-.nav-buttons{
+
+.nav-buttons {
     background-color: transparent;
     border-color: transparent;
     font-size: x-large;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .nav-buttons:hover {
     color: green;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 100px;
 }
 
-#log-in{
+#log-in {
     margin-right: 40px;
     cursor: pointer;
 }
 
-#sign-up{
+#log-in{
     border-radius: 8px;
     padding: 10px;
     width: 9vw;
-    background-color: rgb(109, 158, 20);
+    background-color: rgb(83, 118, 19);
     color: white;
     cursor: pointer;
-    box-shadow: inset 0 0 0 0 rgb(87, 120, 53);
+    box-shadow: inset 0 0 0 0  rgb(96, 135, 60);
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
-#sign-up:hover {
-    box-shadow: inset 200px 0 0 0 rgb(87, 120, 53);
+
+#log-in:hover {
+    box-shadow: inset 200px 0 0 0  rgb(96, 135, 60);
     color: white;
   }
 
-  /* Nav Bar */
+/* Nav Bar */
 
-  /* Header */
+/* Header */
 
-#header-container{
+#header-container {
     background-color: rgb(247, 244, 234);
     display: flex;
     justify-content: space-between;
@@ -74,74 +76,80 @@ nav{
     height: 30vh;
 }
 
-#header-search-filter-container{
- display: flex;
- flex-direction: column;
- align-items: center;
+#header-search-filter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#header-text-container{
+#header-text-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-#explore-our-menu-text{
+#explore-our-menu-text {
     font-family: 'Manrope', sans-serif;
     font-size: 50px;
-    color:  rgb(87, 120, 53);
+    color: rgb(87, 120, 53);
     padding-top: 30px;
 }
 
-#meals-starting-text{
+#meals-starting-text {
     font-family: 'Mulish', sans-serif;
     color: grey;
     font-weight: bolder;
     font-size: 20px;
 }
-#clear-filter{
+
+#clear-filter {
     background-color: rgb(109, 158, 20);
     padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 12px;
-  cursor: pointer;
-  border-color: transparent;
-  
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    border-color: transparent;
+
 }
-.filter-button{
+
+.filter-button {
     background-color: rgb(204, 238, 170);
     padding: 12px;
     border-radius: 5px;
-    border-color:rgb(121, 205, 38);
-    border-width: 1px ;
+    border-color: rgb(121, 205, 38);
+    border-width: 1px;
     cursor: pointer;
     font-family: 'Mulish', sans-serif;
     color: green;
 }
-.filter-button-white{
+
+.filter-button-white {
     background-color: white;
     border-color: darkgreen;
     color: darkgreen;
 }
+
 .filter-button:hover {
     background-color: white;
     border-color: darkgreen;
     color: darkgreen;
 }
-#search-form{
+
+#search-form {
     position: relative;
     z-index: 1;
 }
-#search-icon{
-    position:absolute;
+
+#search-icon {
+    position: absolute;
     z-index: 4;
 }
 
-#search-input{
+#search-input {
     border-radius: 15px;
     height: 50px;
     width: 400px;
@@ -156,85 +164,267 @@ input:focus {
     outline: darkgreen;
 }
 
-    /* Header */
+/* Header */
 
-    /* Menu items */
-main{
-    /* padding: 55px; */
+/* Menu items */
+main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-#meal-kits-text{
+#meal-kits-text {
     font-family: 'Manrope', sans-serif;
     font-size: 32px;
     color: grey;
     width: 75%;
     padding-top: 15px;
-    }
-    .menu-items-container{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        background-color: white;
-        width: 75%;
-    }
-    .menu-image{
-        height: 180px;
-        width: 300px;
-    }
-    .meal-buttons{
-        display: flex;
-        /* justify-content: center; */
-        flex-direction: column;
-        margin-top: 30px;
-        background-color: white;
-        padding: 0;
-        cursor: pointer;
-        border: 1px solid #eee; 
-        box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
-        transition: all .3s ease-in-out;
-    }
-    .meal-buttons:hover {
-        box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
-        transform: translate3d(0px, -1px, 0px);
-    }
+}
+.meal-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: medium;
+    color: grey;
+    margin: 5px 5px;
+    max-width: 300px;
+}
+
+.menu-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: white;
+    width: 75%;
+}
+
+.menu-image {
+    height: 180px;
+    max-width: 300px;
+}
+
+.meal-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    background-color: white;
+    padding: 0;
+    cursor: pointer;
+    border: 1px solid #eee;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
+    transition: all .3s ease-in-out;
+}
+
+.meal-buttons:hover {
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
+    transform: translate3d(0px, -1px, 0px);
+}
+
+.preferences {
+    border-radius: 2px;
+    color: white;
+    margin: 5px 5px;
+    font-family: 'Mulish', sans-serif;
+}
+
+#calorie-smart {
+    background-color: darkcyan;
+    padding: 0 9px;
+}
+
+#protein-plus {
+    background-color: rgba(139, 0, 0, 0.719);
+    padding: 0 9px;
+}
+
+#keto {
+    background-color: rgb(188, 168, 18);
+    padding: 0 9px;
+}
+
+#carb-smart {
+    background-color: rgb(0, 81, 139);
+    padding: 0 9px;
+}
+
+#populars {
+    background-color: rgb(79, 0, 139);
+    padding: 0 9px;
+}
+
+.preference-container {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+/* Menu items */
+
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: rgb(247, 244, 234);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 6px;
+    width: 55%
+}
+
+/* Modal Header */
+
+#model-header-outer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.meal-title-modal {
+    font-family: 'Manrope', sans-serif;
+    font-size: x-large;
+    color: grey;
+    margin: 5px 5px;
+    max-width: 300px;
+}
+
+/* The Close Button */
+.close {
+    color: #6e2424a3;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Middle Section */
+#modal-middle-container {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#modal-middle-left-container {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    max-width: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    
+}
+
+.modal-image {
+    height: 85%;
+    width: 95%;
+}
+
+.fa-brands{
+    margin-left: 5px;
+}
+
+.preference-container-modal {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+}
+
+.kcal-data{
+    margin-left: 2px;
+    font-family: 'Mulish', sans-serif;
+}
+
+#calorie-smart-modal {
+    background-color: darkcyan;
+    padding: 0 9px;
+}
+
+#protein-plus-modal {
+    background-color: rgba(139, 0, 0, 0.719);
+    padding: 0 9px;
+}
+
+#keto-modal {
+    background-color: rgb(188, 168, 18);
+    padding: 0 9px;
+}
+
+#carb-smart-modal {
+    background-color: rgb(0, 81, 139);
+    padding: 0 9px;
+}
+
+#populars-modal {
+    background-color: rgb(79, 0, 139);
+    padding: 0 9px;
+}
+
+/* Modal Middle Right */
+#modal-middle-right-container {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    width: 30%;
+    border-radius: 10px;
+    padding: 15px;
+    
+}
+#mmr-heading-container{
+    display: flex;
+    justify-content: center;
+
+}
+#nutrients-container{
+  margin-top: 40px;
+  font-family: 'Mulish', sans-serif;
+
+}
+.nutrients{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+
+h4{
+    font-family: 'Manrope', sans-serif;
+    color: rgb(162, 162, 162);
+    height: 20%;
+    font-size: larger;
+}
+
+#modal-bottom-container{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+#modal-ingredients{
+    font-family: 'Mulish', sans-serif;
+}
 
 
-    .meal-title{
-        font-family: 'Manrope', sans-serif;
-        margin: 5px 5px;
-    }
-    .preferences{
-        border-radius: 2px;
-        color: white;
-        margin: 5px 5px;
-    }
-    #calorie-smart{
-        background-color:darkcyan;
-        padding: 0 9px;
-    }
-    #protein-plus{
-        background-color:rgba(139, 0, 0, 0.719);
-        padding: 0 9px;
-    }
-    #keto{
-        background-color:rgb(188, 168, 18);
-        padding: 0 9px;
-    }
-    #carb-smart{
-        background-color:rgb(0, 81, 139);
-        padding: 0 9px;
-    }
-    #populars{
-        background-color:rgb(79, 0, 139);
-        padding: 0 9px;
-    }
-    .preference-container{
-        display: flex;
-        justify-content: start;
-        align-items: start;
-    }
 
-    /* Menu items */
+
+/* Modal */
