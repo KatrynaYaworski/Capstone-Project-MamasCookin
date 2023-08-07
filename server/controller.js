@@ -5,7 +5,6 @@ const bcrypt = require("bcryptjs");
 const seedData = require("./seedData");
 
 const Sequelize = require("sequelize");
-const cart = [];
 
 const sequelize = new Sequelize(CONNECTION_STRING, {
   dialect: "postgres",
@@ -101,19 +100,19 @@ module.exports = {
   },
 
   getCart: (req, res) => {
-    // const {cart} = req.session; UNCOMMENT AND DELETE CART VAR AT TOP WHEN HOSTING
+    const {cart} = req.session; 
     res.status(200).send(cart);
   },
 
   addToCart: (req, res) => {
-    // const {cart} = req.session; UNCOMMENT AND DELETE CART VAR AT TOP WHEN HOSTING
+    const {cart} = req.session; 
     const { body } = req;
     body.quantity = (body.quantity || 0) + 1; // checks if body.quantity is truthy. If it exists and is truthy, it will use its current value. Then, we increment by 1.
     cart.push(body);
     res.status(200).send(cart);
   },
   adjustCartQuantity: (req, res) => {
-    // const {cart} = req.session;  UNCOMMENT AND DELETE CART VAR AT TOP WHEN HOSTING
+    const {cart} = req.session;
     const { id, type } = req.params;
     let meal = cart.find((item) => item.menu_id === +id);
     if (type === "increment") {
@@ -126,7 +125,7 @@ module.exports = {
 
   deleteCart: (req, res) => {
     const { id } = req.params;
-    //  const {cart} = req.session; UNCOMMENT WHEN HOSTING
+     const {cart} = req.session;
     let index = cart.findIndex((item) => +item.menu_id === +id);
     if (index !== -1) {
       cart.splice(index, 1);

@@ -22,33 +22,33 @@ const searchForm = document.querySelector("#search-form");
 
 const getMenuItems = () => {
   axios
-    .get(`http://localhost:4004/menu_items${menuItemsQuery}`)
+    .get(`/menu_items${menuItemsQuery}`)
     .then(displayMenu)
     .catch((e) => console.log(`Error with getting the menu items`, e));
 };
 
 const getCart = () => {
-  return axios.get("http://localhost:4004/cart");
+  return axios.get("/cart");
 };
 
 const adjustCartQuantity = (id, type) => {
   console.log("testestest");
   axios
-    .put(`http://localhost:4004/cart/${id}/${type}`)
+    .put(`/cart/${id}/${type}`)
     .then(() => getMenuItems())
     .catch((e) => console.log(`Error with adjusting the cart`, e));
 };
 
 const addToCart = (meal) => {
   axios
-    .post("http://localhost:4004/cart", meal)
+    .post("/cart", meal)
     .then(() => getMenuItems())
     .catch((e) => console.log(`Error with adding to the cart`, e));
 };
 
 const deleteFromCart = (id) => {
   axios
-    .delete(`http://localhost:4004/cart/${id}`)
+    .delete(`/cart/${id}`)
     .then(() => getMenuItems())
     .catch((e) => console.log(`Error with deleting from the cart`, e));
 };

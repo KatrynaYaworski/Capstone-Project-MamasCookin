@@ -16,7 +16,7 @@ const allFilterButtons = document.querySelectorAll(".filter-button");
 //ajax request to grab menu items to include the query for search and filter.
 const getMenuItems = () => {
   axios
-    .get(`http://localhost:4004/menu_items${menuItemsQuery}`)
+    .get(`/menu_items${menuItemsQuery}`)
     .then(displayMenu)
     .catch((e) => console.log(`Error with getting the menu items`, e));
 };

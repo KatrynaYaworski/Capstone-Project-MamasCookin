@@ -4,7 +4,7 @@ const shipping = document.querySelector("#os-shipping-price");
 
 const getCart = () => {
   axios
-    .get("http://localhost:4004/cart")
+    .get("/cart")
     .then(displayQuantity)
     .catch((e) => console.log(`Error with getting the cart`, e));
 };
@@ -16,7 +16,7 @@ const registerUser = () => {
   allInputs.forEach((element) => {
     body[element.name] = element.value;
   });
-  axios.post("http://localhost:4004/users", body).then(() => {
+  axios.post("/users", body).then(() => {
     window.location.href = "../payment/payment.js";
   });
 };

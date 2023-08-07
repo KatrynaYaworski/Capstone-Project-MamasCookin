@@ -7,7 +7,7 @@ const headerKitPrice = document.querySelector("#os-kit-price-quantity");
 
 const getCart = () => {
   axios
-    .get("http://localhost:4004/cart")
+    .get("/cart")
     .then(displayCart)
     .catch((e) => console.log(`Error with getting the cart`, e));
 };
@@ -15,21 +15,21 @@ const getCart = () => {
 const adjustCartQuantity = (id, type) => {
   console.log("testestest");
   axios
-    .put(`http://localhost:4004/cart/${id}/${type}`)
+    .put(`/cart/${id}/${type}`)
     .then(getCart)
     .catch((e) => console.log(`Error with adjusting the cart`, e));
 };
 
 const addToCart = (meal) => {
   axios
-    .post("http://localhost:4004/cart", meal)
+    .post("/cart", meal)
     .then(getCart)
     .catch((e) => console.log(`Error with adding to the cart`, e));
 };
 
 const deleteFromCart = (id) => {
   axios
-    .delete(`http://localhost:4004/cart/${id}`)
+    .delete(`/cart/${id}`)
     .then(getCart)
     .catch((e) => console.log(`Error with deleting from the cart`, e));
 };

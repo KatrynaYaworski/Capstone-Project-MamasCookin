@@ -23,7 +23,7 @@ const logUserIn = () => {
      allInputs.forEach((element) => {
        body[element.name] = element.value;
      })
-    axios.post("http://localhost:4004/login", body)
+    axios.post("/login", body)
     .then(getAuthenticatedUser)
     .catch(() => {
       const inputForm = document.getElementById("input-form");
@@ -41,7 +41,7 @@ const logUserIn = () => {
   }
 
   const logOut = () => {
-    axios.delete("http://localhost:4004/login")
+    axios.delete("/login")
     .then(()=>{  
         plansNav.textContent = "My Meals";
         modal.style.display = 'none';
@@ -54,8 +54,8 @@ const logUserIn = () => {
 
   //use this ajax request when we want to make changes on the html pages that change when a user is logged in.
   const getAuthenticatedUser = () => {
-    axios.get("http://localhost:4004/users") //COMMENT ME OUT TO MOCK SCENARIOS BELOW
-    // new Promise(resolve => resolve({ data: {firstName: "Garrett "}})) //UNCOMMENT TO MOCK HAVING USER
+    axios.get("/users") //COMMENT ME OUT TO MOCK SCENARIOS BELOW
+    // new Promise(resolve => resolve({ data: {firstName: "Katryna "}})) //UNCOMMENT TO MOCK HAVING USER
     // new Promise((resolve, reject) => reject("No user found")) //UNCOMMENT TO MOCK NO USER
     .then((res)=>{
       //create log out button and welcome text
