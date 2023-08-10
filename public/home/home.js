@@ -41,13 +41,8 @@ const logUserIn = () => {
   }
 
   const logOut = () => {
-    axios.delete("/login")
-    .then(()=>{  
-        plansNav.textContent = "My Meals";
-        modal.style.display = 'none';
-        navContainerRight.removeChild(navContainerRight.children[1]);
-        navContainerRight.removeChild(navContainerRight.children[0]);
-    })
+    axios.delete("/logout")
+    .then(getAuthenticatedUser)
     .catch((e) => console.log(`Error with logging out`, e));
    
   }
@@ -59,7 +54,12 @@ const logUserIn = () => {
     // new Promise((resolve, reject) => reject("No user found")) //UNCOMMENT TO MOCK NO USER
     .then((res)=>{
       //create log out button and welcome text
-      const logOutBtn = document.createElement("button");
+      let logOutBtn = document.querySelector("log-out");
+      if(logOutBtn){
+        logOutBtn.style.display = 'block'
+      }
+      else{
+      logOutBtn = document.createElement("button");
       logOutBtn.setAttribute("id", 'log-out');
       logOutBtn.className = "nav-buttons";
       logOutBtn.textContent = "Log Out";
@@ -69,7 +69,12 @@ const logUserIn = () => {
         modal.style.display = 'none';
 
         logOutBtn.addEventListener("click", () => logOut());
+      }
 
+        const openLogInModalBtn = document.querySelector("#log-in");
+        if(openLogInModalBtn){
+          openLogInModalBtn.style.display = 'none'
+        };
         const welcomeText = document.createElement('span');
         welcomeText.className ="nav-buttons"
         welcomeText.id = "welcome-text";
@@ -78,7 +83,14 @@ const logUserIn = () => {
         navContainerRight.appendChild(welcomeText);
       })
       .catch((e) => {
-        console.log(e)
+        const logOutBtn = document.querySelector('#log-out');
+        if(logOutBtn){
+          logOutBtn.style.display = 'none';
+        }
+        const logInBtn = document.querySelector("#log-in");
+        if(logInBtn){
+          logInBtn.style.display = 'block';
+        }else{
       const openLogInModalBtn = document.createElement("button");
       openLogInModalBtn.setAttribute("id", 'log-in');
       openLogInModalBtn.className = "nav-buttons";
@@ -90,7 +102,8 @@ const logUserIn = () => {
       emailInput.value = '';
       passwordInput.value ='';
       errorMessage.textContent ='';
-      }
+      };
+    };
 
       })
     }

@@ -30,17 +30,18 @@ app.use(
     cookie: { maxAge: 1000 * 60 * 60 * 24 },
   })
 );
-// app.use((req, res, next) => {
-  //   if (!req.session.cart) {
-//     req.session.cart = [];
+app.use((req, res, next) => {
+    if (!req.session.cart) {
+    req.session.cart = [];
+    ///dummy user data
 //     // req.session.user = {
 //     //   email: 'john.doe@gmail.com',
 //     //   firstName: 'John',
 //     //   lastName: 'Doe'
 //     // }
-//   }
-//   next();
-// });
+  }
+  next();
+});
 
 app.use(express.static(`public`));
 
@@ -57,7 +58,9 @@ app.post("/users", registerUser);
 app.get("/users", getusers);
 
 app.post("/login", userLogin);
-app.delete("/login", logOut);
+app.delete("/logout", logOut);
+
+
 
 app.get('/images/:image',(req,res) => {
   res.sendFile(path.join(__dirname,`../public/images/${req.params.image}`))

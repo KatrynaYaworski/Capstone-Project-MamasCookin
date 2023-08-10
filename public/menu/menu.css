@@ -262,7 +262,9 @@ main {
 
 .modal {
     display: none;
-    position: fixed;
+    justify-content: center;
+    align-items: center; /* ---- */
+    position: fixed; /* ---- */
     z-index: 1;
     left: 0;
     top: 0;
@@ -275,7 +277,7 @@ main {
 
 .modal-content {
     background-color: rgb(247, 244, 234);
-    margin: 15% auto;
+    /* margin: 15% auto; */
     padding: 20px;
     border: 1px solid #888;
     border-radius: 6px;

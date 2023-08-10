@@ -158,7 +158,7 @@ function displayMenu(res) {
       modalSodiumText.textContent = `${meal.sodium}g`;
       modalIngredients.textContent = `Ingredients: ${meal.ingredients}`;
 
-      modal.style.display = "block";
+      modal.style.display = "flex"; 
     };
 
     // When the user clicks on the exit button, close the modal

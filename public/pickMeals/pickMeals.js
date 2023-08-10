@@ -19,6 +19,7 @@ const clearFilter = document.querySelector("#clear-filter");
 const allFilterButtons = document.querySelectorAll(".filter-button");
 
 const searchForm = document.querySelector("#search-form");
+const searchInput = document.querySelector("#search-input");
 
 const getMenuItems = () => {
   axios
@@ -32,7 +33,6 @@ const getCart = () => {
 };
 
 const adjustCartQuantity = (id, type) => {
-  console.log("testestest");
   axios
     .put(`/cart/${id}/${type}`)
     .then(() => getMenuItems())
@@ -150,23 +150,18 @@ function displayMenu(res) {
         buttonContainer.appendChild(selectedData);
         buttonContainer.appendChild(plusButton);
         mealButton.appendChild(outerButtonContainer);
-        console.log("1");
         if (!cartItem) {
-          console.log("2");
           plusButton.addEventListener("click", () => addToCart(meal));
         } else {
-          console.log("3");
           plusButton.addEventListener("click", () =>
             adjustCartQuantity(meal.menu_id, "increment")
           );
         }
         if (cartItem && cartItem.quantity === 1) {
-          console.log("4");
           minusButton.addEventListener("click", () =>
             deleteFromCart(meal.menu_id)
           );
         } else if (cartItem && cartItem.quantity > 1) {
-          console.log("5");
           minusButton.addEventListener("click", () =>
             adjustCartQuantity(meal.menu_id, "decrement")
           );
@@ -232,7 +227,6 @@ searchForm.onsubmit = (e) => {
 };
 
 function changeFilterButtons(e) {
-  console.log(allFilterButtons);
   allFilterButtons.forEach((button) => {
     button.classList.remove("filter-button-white");
   });

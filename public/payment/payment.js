@@ -13,7 +13,6 @@ const getCart = () => {
 };
 
 const adjustCartQuantity = (id, type) => {
-  console.log("testestest");
   axios
     .put(`/cart/${id}/${type}`)
     .then(getCart)

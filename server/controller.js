@@ -101,16 +101,17 @@ module.exports = {
 
   getCart: (req, res) => {
     const {cart} = req.session; 
-    res.status(200).send(cart);
+    res.status(200).send(cart || []);
   },
 
   addToCart: (req, res) => {
     const {cart} = req.session; 
     const { body } = req;
-    body.quantity = (body.quantity) + 1; // checks if body.quantity is truthy. If it exists and is truthy, it will use its current value. Then, we increment by 1.
+    body.quantity = 1;
     cart.push(body);
     res.status(200).send(cart);
   },
+  
   adjustCartQuantity: (req, res) => {
     const {cart} = req.session;
     const { id, type } = req.params;
@@ -144,7 +145,11 @@ module.exports = {
     `
       )
       .then((dbRes) => {
-        req.session.user = { ...dbRes[0], password: undefined };
+        const user = {
+          firstName: dbRes[0][0].first_name,
+          lastName: dbRes[0][0].last_name
+        };
+        req.session.user = user;
         res.sendStatus(200);
       })
       .catch((e) => console.log("error when registering a user", e));
@@ -159,10 +164,12 @@ module.exports = {
     `
       )
       .then((dbRes) => {
-        console.log(password);
-        console.log(dbRes[0][0].password);
         if (bcrypt.compareSync(password, dbRes[0][0].password)) {
-          req.session.user = { ...dbRes[0], password: undefined };
+          const user = {
+            firstName: dbRes[0][0].first_name,
+            lastName: dbRes[0][0].last_name
+          };
+          req.session.user = user;
           res.status(200).send(req.session.user);
         } else {
           res.status(400).send("User not found in condition");
